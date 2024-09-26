@@ -25,8 +25,8 @@ INSERT INTO registration (r_no, firstname, lastname) VALUES
 
 -- Create the login table
 CREATE TABLE login (
-    r_no VARCHAR(10),
-    password VARCHAR(255),
+    r_no VARCHAR(10) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     FOREIGN KEY (r_no) REFERENCES registration(r_no)
 );
 
@@ -59,3 +59,34 @@ INSERT INTO faq (question, answer) VALUES
 ('What is the total number of seats allotted for the program?', 'The total number of seats varies by program.'),
 ('Does it have a management quota?', 'Yes, there are a few seats reserved under the management quota.'),
 ('What is the commencement date?', 'The commencement date is typically announced after the admission process is complete.');
+
+CREATE TABLE information (
+    r_no VARCHAR(10) NOT NULL,
+    id INT(10) AUTO_INCREMENT PRIMARY KEY,
+    passed_from_Modern_College_Pune_05 ENUM('Yes','No') NOT NULL,
+    Gap ENUM('Yes','No') NOT NULL,
+    FOREIGN KEY (r_no) REFERENCES registration(r_no)
+);
+
+CREATE TABLE roaster(
+    id INT(10) AUTO_INCREMENT PRIMARY KEY,
+    caste VARCHAR(50) NOT NULL,
+    roaster INT(20) NOT NULL
+);
+
+CREATE TABLE fee(
+    id INT(10) AUTO_INCREMENT PRIMARY KEY,
+    category VARCHAR(50) NOT NULL,
+    fee INT(10) NOT NULL
+);
+
+CREATE TABLE subject(
+    subject_id VARCHAR(20) PRIMARY KEY,
+    complusory_name VARCHAR(50) NOT NULL,
+    
+);
+
+CREATE TABLE subject1(
+    subject_id VARCHAR(20) PRIMARY KEY,
+    optional_name VARCHAR(50) NOT NULL,
+);

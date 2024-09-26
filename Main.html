@@ -14,14 +14,52 @@
             height: 100vh;
         }
 
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
         /* Floating chat button */
         .chat-btn {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #4CAF50;
+            background-color: #000000;
             color: white;
-            border: none;
+            border: none;   
             border-radius: 50%;
             width: 60px;
             height: 60px;
@@ -186,7 +224,29 @@
 </head>
 
 <body>
+    <header>
+        <h1>Modern College of Arts, Science, and Commerce</h1>
+        <h2>Computer Science Department</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section>
+        <h3>Welcome to the Computer Science Department</h3>
+        <p>Our department is committed to excellence in teaching and research in computer science. We offer a wide range
+            of undergraduate and postgraduate courses to help students prepare for their careers in the IT industry.</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Modern College of Arts, Science, and Commerce - Computer Science Department</p>
+    </footer>
     <!-- Floating Chat Button -->
     <button class="chat-btn" onclick="toggleChat()">
         <span class="chat-icon">💬</span>
