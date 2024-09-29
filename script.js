@@ -1,3 +1,4 @@
+
 // Toggle chat window
 function toggleChat() {
     var chatContainer = document.getElementById('chatContainer');
@@ -12,20 +13,46 @@ function showRegister() {
 
 // Show login form
 function showLogin() {
-    document.getElementById('loginForm').style.display = 'flex';
     document.getElementById('registerForm').style.display = 'none';
+    document.getElementById('loginForm').style.display = 'flex';
 }
 
-// Handle login (mock function)
+//L ogin function
 function login() {
-    // In a real application, you would validate the credentials here
-    alert('Logged in successfully!');
-    document.getElementById('authSection').style.display = 'none';
-    document.getElementById('chatSection').style.display = 'block';
-    document.getElementById('chatFooter').style.display = 'flex';
+    var rno = document.getElementById('loginRno').value;
+    var password = document.getElementById('loginPassword').value;
+
+    // Send AJAX request to login.php
+    fetch('login.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+            'r_no': rno,
+            'password': password
+        })
+    })
+        .then(response => response.text())
+        .then(data => {
+            if (data.includes("Login successful")) {
+                document.getElementById('authSection').style.display = 'none';
+                document.getElementById('chatSection').style.display = 'block';
+                document.getElementById('chatFooter').style.display = 'flex'; // Show chat input
+                document.getElementById('message').focus();
+            } else {
+                alert(data); // Show the server response (error message)
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("An error occurred. Please try again.");
+        });
 }
 
-// Handle registration (mock function)
+
+
+// Register function
 function register() {
     var rno = document.getElementById('registerRno').value;
     var firstName = document.getElementById('registerFirstName').value;
