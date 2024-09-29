@@ -11,7 +11,7 @@
         <h1>Modern College - Computer Science Department</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href=".html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li><a href="faculty.html">Faculty</a></li>
@@ -32,5 +32,28 @@
     <footer>
         <p>© 2024 Modern College of Arts, Science, and Commerce - Computer Science Department</p>
     </footer>
+    
+    <!-- Floating Chat Button -->
+    <button class="chat-btn" onclick="toggleChat()">
+        <span class="chat-icon">💬</span>
+    </button>
+
+    <!-- Chat Section -->
+    <div id="chat-section-container">
+        <!-- Include the chat functionality -->
+        <div id="chat-content">
+            <!-- Fetch the chat.html content using JavaScript -->
+            <script>
+                fetch('chat.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('chat-content').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading chat:', error));
+            </script>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to JavaScript file -->
 </body>
 </html>

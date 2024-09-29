@@ -5,222 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floating Chat Icon with Chat Page</title>
-    <style>
-        /* Basic page styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-        }
-
-
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Floating chat button */
-        .chat-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #000000;
-            color: white;
-            border: none;   
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            text-align: center;
-            font-size: 28px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            z-index: 100;
-        }
-
-        .chat-btn:hover {
-            background-color: #45a049;
-        }
-
-        /* Chat container styling */
-        .chat-container {
-            width: 90%;
-            max-width: 400px;
-            height: 80%;
-            max-height: 600px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            position: fixed;
-            bottom: 100px;
-            right: 20px;
-            display: none;
-            /* Hidden by default */
-            z-index: 101;
-        }
-
-        /* Chat header */
-        .chat-header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 18px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-
-        /* Chat body */
-        .chat-body {
-            flex: 1;
-            padding: 10px;
-            overflow-y: auto;
-            background-color: #f9f9f9;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .chat-message {
-            background-color: #e6e6e6;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            width: fit-content;
-            max-width: 80%;
-        }
-
-        .chat-message.user {
-            background-color: #d1e7dd;
-            align-self: flex-end;
-        }
-
-        /* Chat footer */
-        .chat-footer {
-            padding: 10px;
-            background-color: #fff;
-            display: flex;
-            border-top: 1px solid #ddd;
-        }
-
-        .chat-footer input[type="text"] {
-            width: 80%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            flex: 1;
-        }
-
-        .chat-footer button {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-
-        .chat-footer button:hover {
-            background-color: #45a049;
-        }
-
-        /* Custom scrollbar for chat body */
-        .chat-body::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .chat-body::-webkit-scrollbar-thumb {
-            background-color: #cccccc;
-            border-radius: 10px;
-        }
-
-        /* Media queries for responsiveness */
-        @media (max-width: 768px) {
-            .chat-container {
-                width: 95%;
-                max-width: none;
-                height: 90%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .chat-header {
-                font-size: 16px;
-                padding: 10px;
-            }
-
-            .chat-footer input[type="text"] {
-                padding: 8px;
-            }
-
-            .chat-footer button {
-                padding: 8px;
-                margin-left: 8px;
-            }
-        }
-
-        /* Login and Register styles */
-        .auth-container {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        .auth-container input {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .auth-container button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .auth-container button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
 </head>
 
 <body>
@@ -229,7 +14,7 @@
         <h2>Computer Science Department</h2>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="Main.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li><a href="faculty.html">Faculty</a></li>
@@ -247,191 +32,29 @@
     <footer>
         <p>© 2024 Modern College of Arts, Science, and Commerce - Computer Science Department</p>
     </footer>
+
     <!-- Floating Chat Button -->
     <button class="chat-btn" onclick="toggleChat()">
         <span class="chat-icon">💬</span>
     </button>
 
-    <!-- Chat Container -->
-    <div class="chat-container" id="chatContainer">
-        <div class="chat-header">
-            Chat with Us
-        </div>
-        <div class="chat-body" id="chat-body">
-            <!-- Initially show login form -->
-            <div id="authSection">
-                <h3>Login</h3>
-                <div class="auth-container" id="loginForm">
-                    <input type="text" id="loginRno" placeholder="Registration Number" required>
-                    <input type="password" id="loginPassword" placeholder="Password" required>
-                    <button onclick="login()">Login</button>
-                    <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
-                </div>
-
-                <div class="auth-container" id="registerForm" style="display: none;">
-                    <h3>Register</h3>
-                    <input type="text" id="registerRno" placeholder="Registration Number (10 digits)" pattern="\d{10}"
-                        required>
-                    <input type="text" id="registerFirstName" placeholder="First Name" required>
-                    <input type="text" id="registerLastName" placeholder="Last Name" required>
-                    <input type="password" id="registerPassword" placeholder="Password" required>
-                    <button onclick="register()">Register</button>
-                    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
-                </div>
-            </div>
-
-            <!-- Chat messages will be appended here after login -->
-            <div id="chatSection" style="display: none;">
-                <div class="chat-message">Hello! How can we help you?</div>
-            </div>
-        </div>
-
-        <div class="chat-footer" id="chatFooter" style="display: none;">
-            <form id="chatForm" style="display: flex; width: 100%;">
-                <input type="text" name="message" id="message" placeholder="Type a message..." autocomplete="off">
-                <button type="submit">Send</button>
-            </form>
+    <!-- Chat Section -->
+    <div id="chat-section-container">
+        <!-- Include the chat functionality -->
+        <div id="chat-content">
+            <!-- Fetch the chat.html content using JavaScript -->
+            <script>
+                fetch('chat.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('chat-content').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading chat:', error));
+            </script>
         </div>
     </div>
 
-    <!-- JavaScript to toggle the chat window -->
-    <script>
-        // Toggle chat window
-        function toggleChat() {
-            var chatContainer = document.getElementById('chatContainer');
-            chatContainer.style.display = chatContainer.style.display === "none" || chatContainer.style.display === "" ? "flex" : "none";
-        }
-
-        // Show register form
-        function showRegister() {
-            document.getElementById('loginForm').style.display = 'none';
-            document.getElementById('registerForm').style.display = 'flex';
-        }
-
-        // Show login form
-        function showLogin() {
-            document.getElementById('registerForm').style.display = 'none';
-            document.getElementById('loginForm').style.display = 'flex';
-        }
-
-        //L ogin function
-        function login() {
-            var rno = document.getElementById('loginRno').value;
-            var password = document.getElementById('loginPassword').value;
-
-            // Send AJAX request to login.php
-            fetch('login.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: new URLSearchParams({
-                    'r_no': rno,
-                    'password': password
-                })
-            })
-                .then(response => response.text())
-                .then(data => {
-                    if (data.includes("Login successful")) {
-                        document.getElementById('authSection').style.display = 'none';
-                        document.getElementById('chatSection').style.display = 'block';
-                        document.getElementById('chatFooter').style.display = 'flex'; // Show chat input
-                        document.getElementById('message').focus();
-                    } else {
-                        alert(data); // Show the server response (error message)
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert("An error occurred. Please try again.");
-                });
-        }
-
-
-
-        // Register function
-        function register() {
-            var rno = document.getElementById('registerRno').value;
-            var firstName = document.getElementById('registerFirstName').value;
-            var lastName = document.getElementById('registerLastName').value;
-            var password = document.getElementById('registerPassword').value;
-
-            // Send AJAX request to register.php
-            fetch('register.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: new URLSearchParams({
-                    'r_no': rno,
-                    'firstname': firstName,
-                    'lastname': lastName,
-                    'password': password
-                })
-            })
-                .then(response => response.text())
-                .then(data => {
-                    alert(data); // Show the server response
-                    if (data.includes("Registration successful")) {
-                        showLogin(); // Show the login form
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert("An error occurred. Please try again.");
-                });
-        }
-
-        // Prevent form submission from refreshing the page
-        // Modify chat form submission
-        document.getElementById('chatForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Stop the form from refreshing the page
-
-            // Get the input message
-            var messageInput = document.getElementById('message');
-            var message = messageInput.value.trim(); // Trim leading/trailing whitespace
-
-            if (message !== "") {
-                // Add the user's message to the chat body
-                var chatBody = document.getElementById('chat-body');
-                var userMessage = document.createElement('div');
-                userMessage.classList.add('chat-message', 'user');
-                userMessage.innerText = message;
-                chatBody.appendChild(userMessage);
-
-                // Send the user's message to chat.php
-                fetch('chat.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    body: new URLSearchParams({
-                        'message': message
-                    })
-                })
-                    .then(response => response.text())
-                    .then(data => {
-                        // Add the chatbot's response to the chat body
-                        var botMessage = document.createElement('div');
-                        botMessage.classList.add('chat-message');
-                        botMessage.innerText = data;
-                        chatBody.appendChild(botMessage);
-
-                        // Auto-scroll to the bottom of the chat
-                        chatBody.scrollTop = chatBody.scrollHeight;
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert("An error occurred while sending your message.");
-                    });
-
-                // Clear the input field
-                messageInput.value = '';
-            }
-        });
-
-    </script>
-
+    <script src="script.js"></script> <!-- Link to JavaScript file -->
 </body>
 
 </html>

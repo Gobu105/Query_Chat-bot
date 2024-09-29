@@ -20,10 +20,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Basic sanitization to prevent SQL injection
     $userMessage = $conn->real_escape_string($userMessage);
 
-    // Example: You can now query a table for predefined answers or handle logic here
-    // Assuming you have a table 'faq' with columns 'question' and 'answer'
+    // Convert the user message to lowercase and split it into keywords
+    $keywordsArray = preg_split('/[\s,]+/', strtolower($userMessage));
     
-    $sql = "SELECT answer FROM faq WHERE question LIKE '%$userMessage%' LIMIT 1";
+    // Prepare SQL to search for keywords
+    $keywordConditions = [];
+    foreach ($keywordsArray as $keyword) {
+        $keywordConditions[] = "keywords LIKE '%$keyword%'";
+    }
+    
+    // Join keyword conditions with OR
+    $sql = "SELECT answer FROM faq WHERE " . implode(" OR ", $keywordConditions) . " LIMIT 1";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -31,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         echo $row["answer"];
     } else {
-        // If no answer is found in the database, you can provide a default response
+        // If no answer is found in the database, provide a default response
         echo "Sorry, I don't understand the question. Please try asking differently or contact support.";
     }
 }
