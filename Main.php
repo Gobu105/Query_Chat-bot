@@ -9,30 +9,26 @@
 </head>
 
 <body>
-    <header>
-        <h1>Modern College of Arts, Science, and Commerce</h1>
-        <h2>Computer Science Department</h2>
-        <nav>
-            <ul>
-                <li><a href="Main.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Include header and navigation -->
+    <?php include('header.php'); ?>
 
-    <section>
-        <h3>Welcome to the Computer Science Department</h3>
-        <p>Our department is committed to excellence in teaching and research in computer science. We offer a wide range
-            of undergraduate and postgraduate courses to help students prepare for their careers in the IT industry.</p>
-    </section>
+    <main>
+        <section>
+            <h2>Welcome to the Department of Computer Science</h2>
+            <p>Our department is committed to providing excellence in education and research.</p>
+            <!--<img src="campus.jpg" alt="Campus Image">-->
+        </section>
 
-    <footer>
-        <p>© 2024 Modern College of Arts, Science, and Commerce - Computer Science Department</p>
-    </footer>
+        <section>
+            <h3>Latest News</h3>
+            <div class="news-item">
+                <h4>Upcoming Hackathon</h4>
+                <p>Join us for the annual departmental hackathon. Register now!</p>
+            </div>
+        </section>
+    </main>
 
+    
     <!-- Floating Chat Button -->
     <button class="chat-btn" onclick="toggleChat()">
         <span class="chat-icon">💬</span>

@@ -4,36 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty - CS Department</title>
+    <title>Contact Us - CS Department</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Modern College - Computer Science Department</h1>
-        <nav>
-            <ul>
-                <li><a href=".html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
+    <?php include('header.php'); ?>
     <section>
-        <h3>Our Faculty</h3>
-        <ul>
-            <li>Dr. A. B. Patil - Head of Department</li>
-            <li>Prof. C. D. Sharma - Senior Lecturer</li>
-            <li>Prof. E. F. Gupta - Assistant Professor</li>
-        </ul>
+        <h3>Contact Us</h3>
+        <p>Email: csdept@moderncollegepune.com</p>
+        <p>Phone: +91 1234567890</p>
+        <p>Address: Modern College, Shivaji Nagar, Pune - 411005</p>
     </section>
 
-    <footer>
-        <p>© 2024 Modern College of Arts, Science, and Commerce - Computer Science Department</p>
-    </footer>
+
 
     <!-- Floating Chat Button -->
     <button class="chat-btn" onclick="toggleChat()">

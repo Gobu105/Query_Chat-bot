@@ -1,44 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - CS Department</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - Department of Computer Science</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <h1>Modern College - Computer Science Department</h1>
-        <nav>
-            <ul>
-                <li><a href="Main.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <?php include ('header.php'); ?>
 
+  <main>
     <section>
-        <h3>Our Courses</h3>
-        <ul>
-            <li>BSc Computer Science</li>
-            <li>Bachelor of Computer Applications (BCA)</li>
-            <li>MSc Computer Science</li>
-            <li>Master of Computer Applications (MCA)</li>
-        </ul>
+      <h2>Upcoming Events</h2>
+      <div class="event">
+        <h3>Annual Hackathon</h3>
+        <p>Date: October 15, 2024</p>
+        <a href="event-registration.html?event_id=1">Register Now</a>
+      </div>
+      <div class="event">
+        <h3>AI Workshop</h3>
+        <p>Date: November 5, 2024</p>
+        <a href="event-registration.html?event_id=2">Register Now</a>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>© 2024 Modern College of Arts, Science, and Commerce - Computer Science Department</p>
-    </footer>
-
-
-    <!-- Floating Chat Button -->
-    <button class="chat-btn" onclick="toggleChat()">
+  <!-- Floating Chat Button -->
+  <button class="chat-btn" onclick="toggleChat()">
         <span class="chat-icon">💬</span>
     </button>
 
@@ -88,5 +76,4 @@
 
     <script src="script.js"></script> <!-- Link to JavaScript file -->
 </body>
-
 </html>

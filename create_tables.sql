@@ -38,28 +38,6 @@ CREATE TABLE faq (
     answer TEXT
 );
 
--- Example insertion of questions and answers
-INSERT INTO faq (question, answer) VALUES 
-('What is the admission process?', 'The admission process involves submitting the application form, followed by an interview.'),
-('What is the last date for admission?', 'The last date for admission is September 30th.');
-('What is the duration of this course?', 'The duration of this course is typically 3 to 4 years, depending on the program.'),
-('What are the subjects?', 'The subjects vary based on the program but include core subjects related to the field of study.'),
-('What is the examination pattern?', 'The examination pattern includes internal assessments, end-semester exams, and practical evaluations.'),
-('Does this course follow NEP pattern?', 'Yes, the course structure is aligned with the National Education Policy (NEP).'),
-('What is the cut-off?', 'The cut-off varies each year based on the merit of students and category-wise reservations.'),
-('What are the dates of merit rounds?', 'The merit round dates are typically announced after the submission deadline.'),
-('What is the fee structure?', 'The fee structure depends on the course and category. Please refer to the admission page.'),
-('Are there any procedures for installments?', 'Yes, installment options are available based on the institution’s policy.'),
-('What is the fee structure for caste?', 'The fee structure varies for different categories. Please refer to the official fee chart.'),
-('What is the fee structure for out-of-state students?', 'Out-of-state students may have a different fee structure.'),
-('Is there any scholarship?', 'Yes, scholarships are available based on merit and financial need.'),
-('What is the last day to complete the admission process?', 'The last date for completing the admission process is mentioned in the official notice.'),
-('What documents are required?', 'The required documents typically include mark sheets, ID proof, and transfer certificate for OS students.'),
-('Does it have an army quota?', 'Yes, a certain percentage of seats are reserved for candidates under the army quota.'),
-('What is the total number of seats allotted for the program?', 'The total number of seats varies by program.'),
-('Does it have a management quota?', 'Yes, there are a few seats reserved under the management quota.'),
-('What is the commencement date?', 'The commencement date is typically announced after the admission process is complete.');
-
 CREATE TABLE information (
     r_no VARCHAR(10) NOT NULL,
     id INT(10) AUTO_INCREMENT PRIMARY KEY,
