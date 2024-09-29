@@ -24,7 +24,7 @@ A chatbot designed to assist prospective undergraduate students by providing ans
 ## Usage
 To start using the chatbot:
 
-1. Open the index.html file in your web browser.
+1. Open the Main.html file in your web browser.
 2. Type your admission-related query in the chat interface and hit enter.
 3. The chatbot will provide answers based on the frequently asked questions.
 
