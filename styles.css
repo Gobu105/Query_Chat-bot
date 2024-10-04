@@ -260,3 +260,31 @@ nav ul li a {
 .auth-container button:hover {
     background-color: #45a049;
 }
+
+/* Responsive Image */
+img {
+    max-width: 100%;  /* Ensures the image will not exceed the width of its container */
+    height: auto;     /* Maintains the aspect ratio */
+    display: block;   /* Removes any extra spacing below the image */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+}
+
+/* Specific responsive image styles for different containers or sections */
+.responsive-img {
+    width: 100%;
+    max-width: 600px; /* Example of a max-width constraint */
+    height: auto;
+    border-radius: 10px; /* Add extra styles for specific use cases */
+}
+
+/* Media query to reduce image size for smaller devices */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .responsive-img {
+        max-width: 100%; /* No size constraint for mobile devices */
+    }
+}
