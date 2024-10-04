@@ -23,52 +23,45 @@
       <!-- Faculty Member 2 -->
       <div class="faculty-member">
         <h3>PROF. MANISHA S. SURYAVANSHI</h3>
-        <p>Assistant Professor</p>
+        <p>Professor</p>
         <p><strong>Experience:</strong> 23 years</p>
       </div>
 
       <!-- Faculty Member 3 -->
       <div class="faculty-member">
-        <h3>Dr. Archana J. Hadke</h3>
-        <p>Assistant Professor</p>
-        <p><strong>Experience:</strong> 17 years</p>
+        <h3>PROF. MADHURI S. GHANEKAR</h3>
+        <p>Professor</p>
+        <p><strong>Experience:</strong> 30 years</p>
       </div>
 
       <!-- Faculty Member 4 -->
       <div class="faculty-member">
-        <h3>Mrs. Manisha P. Pawar</h3>
-        <p>Assistant Professor</p>
-        <p><strong>Experience:</strong> 12 years</p>
+        <h3>PROF. SANGEETA S. RAUT</h3>
+        <p>Professor</p>
+        <p><strong>Experience:</strong> 21 years</p>
       </div>
 
       <!-- Faculty Member 5 -->
       <div class="faculty-member">
-        <h3>Mr. Tanaji B. Shinde</h3>
-        <p>Assistant Professor</p>
+        <h3>PROF. ABHIJIT V. SATHE</h3>
+        <p>Professor</p>
         <p><strong>Experience:</strong> 18 years</p>
       </div>
 
       <!-- Faculty Member 6 -->
       <div class="faculty-member">
-        <h3>Mr. Surendra L. Bhurke</h3>
-        <p>Assistant Professor</p>
-        <p><strong>Experience:</strong> 22 years</p>
+        <h3>PROF. SHWETA KHADSE-JAWALE</h3>
+        <p>Professor</p>
+        <p><strong>Experience:</strong> 16 years</p>
       </div>
 
       <!-- Faculty Member 7 -->
       <div class="faculty-member">
-        <h3>Mr. Milind K. Mokashe</h3>
+        <h3>PROF. KIRAN KULKARNI</h3>
         <p>Assistant Professor</p>
-        <p><strong>Experience:</strong> 15 years</p>
+        <p><strong>Experience:</strong> 6 years</p>
       </div>
-
-      <!-- Faculty Member 8 -->
-      <div class="faculty-member">
-        <h3>Mrs. Mrunal R. Raokhande</h3>
-        <p>Assistant Professor</p>
-        <p><strong>Experience:</strong> 9 years</p>
-      </div>
-
+      
     </section>
   </main>
 
