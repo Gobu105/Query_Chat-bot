@@ -6,7 +6,9 @@ USE admission_chatbot;
 CREATE TABLE registration (
     r_no VARCHAR(10) PRIMARY KEY,
     firstname VARCHAR(50),
-    lastname VARCHAR(50)
+    lastname VARCHAR(50),
+    passed_from_Modern_College_Pune_05 ENUM('Yes','No') NOT NULL,
+    Gap ENUM('Yes','No') NOT NULL,
 );
 
 -- Insert some example valid data for registration
@@ -38,19 +40,25 @@ CREATE TABLE faq (
     answer TEXT
 );
 
-CREATE TABLE information (
-    r_no VARCHAR(10) NOT NULL,
-    id INT(10) AUTO_INCREMENT PRIMARY KEY,
-    passed_from_Modern_College_Pune_05 ENUM('Yes','No') NOT NULL,
-    Gap ENUM('Yes','No') NOT NULL,
-    FOREIGN KEY (r_no) REFERENCES registration(r_no)
-);
+
 
 CREATE TABLE roaster(
     id INT(10) AUTO_INCREMENT PRIMARY KEY,
     caste VARCHAR(50) NOT NULL,
-    roaster INT(20) NOT NULL
+    seat_normal INT(20) NOT NULL,
+    seat_in_house INT(20) NOT NULL
 );
+INSERT INTO roaster (caste,seat_normal,seat_in_house) VALUES
+    ('OPEN',33,22),
+    ('SC',11,8),
+    ('ST',6,4),
+    ('VJNT-A',2,2),
+    ('NT-B-1',2,2),
+    ('NT-C-2',3,2),
+    ('NT-D-3',2,1),
+    ('SBC',2,1),
+    ('OBC',15,10),
+    ('EWS',8,6);
 
 CREATE TABLE fee(
     id INT(10) AUTO_INCREMENT PRIMARY KEY,
