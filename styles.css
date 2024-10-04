@@ -10,9 +10,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
-    /* Ensures page doesn't overflow horizontally */
 }
 
 /* Header styling */
@@ -23,16 +22,16 @@ header {
     padding: 10px 0;
     position: sticky;
     top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000;
 }
+
 /* Main content section */
 main {
     flex-grow: 1;
     padding: 20px;
-    padding-top: 60px;  /* Add padding to avoid overlap with fixed header */
-    padding-bottom: 60px; /* Add padding to avoid overlap with fixed footer */
+    padding-top: 60px;  /* Avoid overlap with fixed header */
+    padding-bottom: 60px; /* Avoid overlap with fixed footer */
     min-height: 100vh;
 }
 
@@ -169,15 +168,51 @@ nav ul li a {
 }
 
 /* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    main {
+        padding: 15px;
+        padding-top: 60px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .chat-container {
+        width: 95%;
+        height: 85%;
+    }
+
+    header {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 768px) {
     .chat-container {
         width: 95%;
-        max-width: none;
-        height: 90%;
+        height: 85%;
+        bottom: 60px;
+    }
+
+    header {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
+    .chat-container {
+        width: 100%;
+        height: 90%;
+        bottom: 50px;
+        right: 0;
+    }
+
+    header {
+        font-size: 14px;
+    }
+
     .chat-header {
         font-size: 16px;
         padding: 10px;
@@ -190,6 +225,12 @@ nav ul li a {
     .chat-footer button {
         padding: 8px;
         margin-left: 8px;
+    }
+
+    .chat-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
     }
 }
 
