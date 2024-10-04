@@ -10,8 +10,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    height: 100vh;
     overflow-x: hidden;
+    /* Ensures page doesn't overflow horizontally */
 }
 
 /* Header styling */
@@ -20,22 +21,8 @@ header {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
-/* Main content section */
-main {
-    flex-grow: 1;
-    padding: 20px;
-    padding-top: 60px;  /* Avoid overlap with fixed header */
-    padding-bottom: 60px; /* Avoid overlap with fixed footer */
-    min-height: 100vh;
-}
-
-/* Navigation styling */
 nav ul {
     list-style: none;
     padding: 0;
@@ -49,6 +36,15 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+}
+
+/* Main content section */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    padding-top: 60px;  /* Add padding to avoid overlap with fixed header */
+    padding-bottom: 60px; /* Add padding to avoid overlap with fixed footer */
+    min-height: 100vh;
 }
 
 /* Floating chat button */
@@ -167,60 +163,16 @@ nav ul li a {
     border-radius: 10px;
 }
 
-/* Responsive Image */
-img {
-    max-width: 100%;  /* Ensures the image will not exceed the width of its container */
-    height: auto;     /* Maintains the aspect ratio */
-    display: block;   /* Removes any extra spacing below the image */
-    border-radius: 5px; /* Optional: Add border radius for rounded corners */
-}
-
 /* Media queries for responsiveness */
-@media (max-width: 1024px) {
-    main {
-        padding: 15px;
-        padding-top: 60px;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .chat-container {
-        width: 95%;
-        height: 85%;
-    }
-
-    header {
-        font-size: 18px;
-    }
-}
-
 @media (max-width: 768px) {
     .chat-container {
         width: 95%;
-        height: 85%;
-        bottom: 60px;
-    }
-
-    header {
-        font-size: 16px;
+        max-width: none;
+        height: 90%;
     }
 }
 
 @media (max-width: 480px) {
-    .chat-container {
-        width: 100%;
-        height: 90%;
-        bottom: 50px;
-        right: 0;
-    }
-
-    header {
-        font-size: 14px;
-    }
-
     .chat-header {
         font-size: 16px;
         padding: 10px;
@@ -233,12 +185,6 @@ img {
     .chat-footer button {
         padding: 8px;
         margin-left: 8px;
-    }
-
-    .chat-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
     }
 }
 
