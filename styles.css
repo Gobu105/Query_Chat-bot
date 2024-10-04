@@ -169,7 +169,7 @@ nav ul li a {
 
 /* Responsive Image */
 img {
-    max-width: 50%;  /* Ensures the image will not exceed the width of its container */
+    max-width: 100%;  /* Ensures the image will not exceed the width of its container */
     height: auto;     /* Maintains the aspect ratio */
     display: block;   /* Removes any extra spacing below the image */
     border-radius: 5px; /* Optional: Add border radius for rounded corners */
