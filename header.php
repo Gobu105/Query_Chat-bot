@@ -1,5 +1,8 @@
 <header>
-  <img src="logo.png" alt="College Logo">
+  
+  <div class="logo-container">
+    <img src="https://moderncollegepune.edu.in/wp-content/uploads/2023/12/logo.png">
+  </div>
   <h1>Department of Computer Science</h1>
   <nav>
     <ul>
