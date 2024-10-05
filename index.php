@@ -14,16 +14,16 @@
 
     <main>
         <section>
-            <h2>Welcome to the Department of Computer Science</h2>
+            <h2>Welcome to the Department of Computer Science</h2><br>
             <p>Our department is committed to providing excellence in education and research.</p>
             <!--<img src="campus.jpg" alt="Campus Image">-->
         </section>
-
+        <br><br><br><br>
         <section>
-            <h3>Latest News</h3>
+            <h3>Latest News</h3><br>
             <div class="news-item">
-                <h4>Upcoming Hackathon</h4>
-                <p>Join us for the annual departmental hackathon. Register now!</p>
+                <h4>Upcoming Hackathon</h4><br>
+                <p>Join us for the annual departmental hackathon.<a href="Register.html">Register now!</a></p>
             </div>
         </section>
     </main>

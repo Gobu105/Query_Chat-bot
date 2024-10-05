@@ -18,49 +18,49 @@
         <h3>PROF. SHAMKANT S.DESHMUKH</h3>
         <p>Head of Computer Science Department</p>
         <p><strong>Experience:</strong> 23 years</p>
-      </div>
+      </div><br>
 
       <!-- Faculty Member 2 -->
       <div class="faculty-member">
         <h3>PROF. MANISHA S. SURYAVANSHI</h3>
         <p>Professor</p>
         <p><strong>Experience:</strong> 23 years</p>
-      </div>
+      </div><br>
 
       <!-- Faculty Member 3 -->
       <div class="faculty-member">
         <h3>PROF. MADHURI S. GHANEKAR</h3>
         <p>Professor</p>
         <p><strong>Experience:</strong> 30 years</p>
-      </div>
+      </div><br>
 
       <!-- Faculty Member 4 -->
       <div class="faculty-member">
         <h3>PROF. SANGEETA S. RAUT</h3>
         <p>Professor</p>
         <p><strong>Experience:</strong> 21 years</p>
-      </div>
+      </div><br>
 
       <!-- Faculty Member 5 -->
       <div class="faculty-member">
         <h3>PROF. ABHIJIT V. SATHE</h3>
         <p>Professor</p>
         <p><strong>Experience:</strong> 18 years</p>
-      </div>
+      </div><br>
 
       <!-- Faculty Member 6 -->
       <div class="faculty-member">
         <h3>PROF. SHWETA KHADSE-JAWALE</h3>
         <p>Professor</p>
         <p><strong>Experience:</strong> 16 years</p>
-      </div>
+      </div><br>
 
       <!-- Faculty Member 7 -->
       <div class="faculty-member">
         <h3>PROF. KIRAN KULKARNI</h3>
         <p>Assistant Professor</p>
         <p><strong>Experience:</strong> 6 years</p>
-      </div>
+      </div><br>
       
     </section>
   </main>

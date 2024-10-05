@@ -45,6 +45,7 @@ main {
     padding-top: 60px;  /* Add padding to avoid overlap with fixed header */
     padding-bottom: 60px; /* Add padding to avoid overlap with fixed footer */
     min-height: 100vh;
+    text-align:center;
 }
 
 /* Floating chat button */

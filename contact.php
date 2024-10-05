@@ -11,13 +11,14 @@
 <body>
 
     <?php include('header.php'); ?>
-    <section>
-        <h3>Contact Us</h3>
-        <p>Email: csdept@moderncollegepune.com</p>
-        <p>Phone: +91 1234567890</p>
-        <p>Address: Modern College, Shivaji Nagar, Pune - 411005</p>
-    </section>
-
+    <main>
+        <section>
+            <h3>Contact Us</h3><br>
+            <p>Email: csdept@moderncollegepune.com</p><br>
+            <p>Phone: +91 1234567890</p><br>
+            <p>Address: Modern College, Shivaji Nagar, Pune - 411005</p><br>
+        </section>
+    </main>
 
 
     <!-- Floating Chat Button -->

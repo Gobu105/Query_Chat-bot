@@ -14,11 +14,12 @@
   <main>
     <section>
       <h2>Courses Offered</h2>
-      <p>We offer the following undergraduate and postgraduate programs:</p>
+      <p>We offer the following undergraduate and postgraduate programs:</p><br>
       <ul>
-        <li>Bachelor of Computer Science (B.Sc.)</li>
-        <li>Master of Computer Science (M.Sc.)</li>
-        <li>Postgraduate Diploma in Computer Applications (PGDCA)</li>
+        <li>Bachelor of Computer Science (BSc.Cs)</li>
+        <li>Master of Computer Science (MSc.CS)</li>
+        <li>Bachelor of Computer Application Science (BSc.CA)</li>
+        <li>Master of Computer Application (MSC.CA)</li>
       </ul>
     </section>
   </main>
