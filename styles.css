@@ -67,7 +67,7 @@ main {
 }
 
 .chat-btn:hover {
-    background-color: #45a049;
+    background-color: #0171e2;
 }
 
 /* Chat container styling */
@@ -91,7 +91,7 @@ main {
 
 /* Chat header */
 .chat-header {
-    background-color: #4CAF50;
+    background-color: #0171e2;
     color: white;
     padding: 15px;
     text-align: center;
@@ -142,7 +142,7 @@ main {
 
 .chat-footer button {
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #0171e2;
     color: white;
     border: none;
     border-radius: 5px;
@@ -151,7 +151,7 @@ main {
 }
 
 .chat-footer button:hover {
-    background-color: #45a049;
+    background-color: #0171e2;
 }
 
 /* Custom scrollbar for chat body */
@@ -204,7 +204,7 @@ main {
 }
 
 .auth-container button {
-    background-color: #4CAF50;
+    background-color: #0171e2;
     color: white;
     border: none;
     padding: 10px;
@@ -213,5 +213,5 @@ main {
 }
 
 .auth-container button:hover {
-    background-color: #45a049;
+    background-color: #0171e2;
 }
