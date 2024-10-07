@@ -38,19 +38,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         $matchedQuestion = strtolower($row["answer"]);
 
-        // Logic to match questions to different PHP files based on keywords
-        if (strpos($matchedQuestion, 'fee') !== false) {
-            // Call the fee.php script
-            include 'fees.php';
-        } elseif (strpos($matchedQuestion, 'subject') !== false && strpos($matchedQuestion, 'semester 1') !== false) {
-            // Call the sem1.php script for semester 1 subjects
-            include 'sem1.php';
-            include 'sem2.php';
-        } elseif (strpos($matchedQuestion, ('seat'||'seats')) !== false || strpos($matchedQuestion, 'roaster') !== false) {
-            // Call the roaster.php script for seat allocation
-            include 'roaster.php';
+        // Logic to differentiate between requests for details and general queries
+        if (strpos($userMessage, 'details') !== false || strpos($userMessage, 'show') !== false) {
+            if (strpos($matchedQuestion, 'fee') !== false) {
+                // Show detailed fee structure
+                include 'fees.php';
+            } elseif (strpos($matchedQuestion, 'subject') !== false) {
+                if (strpos($matchedQuestion, 'semester 1') !== false) {
+                    // Show subjects for semester 1
+                    include 'sem1.php';
+                } elseif (strpos($matchedQuestion, 'semester 2') !== false) {
+                    // Show subjects for semester 2
+                    include 'sem2.php';
+                }
+            } elseif (strpos($matchedQuestion, 'seat') !== false || strpos($matchedQuestion, 'roaster') !== false) {
+                // Show details of the roaster
+                include 'roaster.php';
+            } else {
+                // Return the answer from the FAQ
+                echo $row["answer"];
+            }
         } else {
-            // Return the answer from the FAQ
+            // Return the answer from the FAQ for general queries
             echo $row["answer"];
         }
     } else {
