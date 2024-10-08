@@ -36,8 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         // Get the first matching result
         $row = $result->fetch_assoc();
-        $matchedQuestion = strtolower($row["answer"]);
+        $matchedAnswer = strtolower($row["answer"]);
 
+<<<<<<< HEAD
         // Logic to differentiate between requests for details and general queries
         if (strpos($userMessage, 'details') !== false || strpos($userMessage, 'show') !== false) {
             if (strpos($matchedQuestion, 'fee') !== false) {
@@ -60,6 +61,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         } else {
             // Return the answer from the FAQ for general queries
+=======
+        // Logic to match questions to different PHP files based on keywords
+        if (strpos($matchedAnswer, 'fee') !== false) {
+            // Call the fees.php script
+            include 'fees.php';
+        } elseif (strpos($matchedAnswer, 'subject') !== false && strpos($matchedAnswer, 'semester 1') !== false) {
+            // Call the sem1.php script for semester 1 subjects
+            include 'sem1.php';
+        } elseif (strpos($matchedAnswer, 'seat') !== false || strpos($matchedAnswer, 'seats') !== false || strpos($matchedAnswer, 'roster') !== false) {
+            // Call the roaster.php script for seat allocation
+            include 'roaster.php';
+        } else {
+            // Return the answer from the FAQ if no specific file is included
+>>>>>>> 36254ac0dd9f6055bad87e1a48acbb1fc1c7bc4e
             echo $row["answer"];
         }
     } else {
