@@ -36,9 +36,47 @@ CREATE TABLE login (
 
 CREATE TABLE faq (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    question VARCHAR(255),
+    keyword VARCHAR(255),
     answer TEXT
 );
+
+
+INSERT INTO faq (keyword, answer) VALUES 
+-- Greetings
+('hi, hello, greetings', 'Hello! How can I assist you today?'),
+('good morning, good afternoon, good evening', 'Good day! How can I help you?'),
+
+-- Normal Queries
+('admission, eligibility, requirements', 'To be eligible for admission, candidates must have completed their higher secondary education (10+2) from a recognized board. Specific subject requirements may vary based on the course.'),
+('application, process, steps', 'The admission process includes filling out the online application form, submitting required documents, and paying the application fee. Please refer to the college website for detailed instructions.'),
+('important dates, admission, deadlines', 'Important dates for admission include application opening and closing dates, entrance exam dates (if applicable), and merit list announcement dates. Check the college website for the specific academic year.'),
+('documents, required, admission', 'Required documents for admission typically include a completed application form, mark sheets from previous examinations, a birth certificate, and category certificates (if applicable).'),
+('scholarship, available, admission', 'The college offers various scholarships based on merit and need. Check the college website or admission office for details on eligibility criteria and application procedures.'),
+('contact, help, support', 'For any queries regarding admission, you can contact the admission office via email or phone, or visit the office during working hours for assistance.'),
+
+-- Fees Related Queries
+('fees, structure, open', 'The fee structure for the open category is ₹57,690.'),
+('fees, structure, SC, ST', 'The fee for SC/ST students is ₹24,955.'),
+('fees, foreign, students', 'The fee for foreign students is ₹1,18,990.'),
+('admission, fee, payment', 'The application fee can be paid online through the college website using credit/debit cards or net banking.'),
+('fee, waiver, eligibility', 'Fee waivers may be available for economically disadvantaged students. Check with the admission office for details on eligibility and application processes.'),
+('tuition, additional, fees', 'In addition to tuition fees, there may be other charges such as laboratory fees, library fees, and other miscellaneous expenses. Please refer to the college website for a complete breakdown.'),
+('scholarship, fee, reduction', 'Certain scholarships can help reduce the overall fees. Make sure to check the eligibility criteria for each scholarship.'),
+    
+-- Roaster Related Queries
+('roaster, seats, OBC', 'For the OBC category, there are 15 normal seats and 10 in-house seats available.'),
+('roaster, seats, SC', 'The SC category has 11 normal seats and 8 in-house seats.'),
+('roaster, total, categories', 'The roaster includes various categories such as OPEN, SC, ST, OBC, and others. Each category has a specified number of seats available.'),
+('seats, available, admission', 'The total number of seats available for different categories is published in the admission guidelines. Please check the college website for the latest information.'),
+
+-- Subjects Related Queries
+('subjects, semester 1, compulsory', 'The compulsory subjects in the first semester include Programming in C, Discrete Mathematics, Basics of Electronics, and Computer Fundamentals.'),
+('subjects, semester 1, optional', 'Optional subjects in the first semester include Fundamentals of Economics, Professional English Skills I, and Music of India.'),
+('subjects, semester 2, compulsory', 'The compulsory subjects in the second semester include Advance C Programming, Matrix Theory, and Digital Marketing.'),
+('subjects, semester 2, optional', 'Optional subjects in the second semester include Introduction to Micro Economics, Professional English Skills II, and History for Policy Makers.'),
+('all, subjects, available', 'A complete list of available subjects for both semesters can be found on the college website or in the course catalog.'),
+('lab, courses, subjects', 'Lab courses are available for subjects like C Programming, Discrete Mathematics, and Statistical Analysis. These are essential for practical learning.'),
+('elective, subjects, information', 'Elective subjects vary by semester and may include options such as International Economics or Stress Management.');
 
 
 
